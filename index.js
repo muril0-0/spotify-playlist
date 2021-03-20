@@ -18,7 +18,7 @@ const musicDir = fs.readdirSync(musicPath);
 
 //Separe musics
 const musics = musicDir.map((item) => {
-  return item.split("-");
+  return item.replace("(Cypher) ", "").split("-");
 });
 
 console.log(musics);
